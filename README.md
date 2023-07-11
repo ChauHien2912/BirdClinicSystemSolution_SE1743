@@ -1,5 +1,1 @@
-"# BirdClinicSystemSolution_SE1743" 
-"# BirdClinicSystemSolution_SE1743" 
-"# BirdClinicSystemSolution_SE1743" 
-"# BirdClinicSystemSolution_SE1743" 
-"# BirdClinicSystemSolution_SE1743" 
+Tạo 1 file appsettings.json để kết nối với database 
