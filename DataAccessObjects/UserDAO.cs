@@ -10,6 +10,7 @@ namespace DataAccessObjects
 {
     public class UserDAO
     {
+        #region
         private static UserDAO instance = null;
         private static readonly object instanceLock = new object();
         public static UserDAO Instance
@@ -26,7 +27,7 @@ namespace DataAccessObjects
                 }
             }
         }
-
+        #endregion
         public static void CreateUser(int roleID, String email, String password, String fullName, bool gender, String phone, String address)
         {
             try
@@ -157,7 +158,7 @@ namespace DataAccessObjects
                     }
                     else
                     {
-                        listUser = context.TblUsers.Where(r => r.RoleId == 4 ).ToList();
+                        listUser = context.TblUsers.Where(r => r.RoleId == 4).ToList();
                     }
                 }
             }
@@ -173,11 +174,12 @@ namespace DataAccessObjects
             TblUser user = null;
             try
             {
-                using(var context = new BirdClinicDBContext())
+                using (var context = new BirdClinicDBContext())
                 {
                     user = context.TblUsers.FirstOrDefault(u => u.Email == email && u.Password == password);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -187,15 +189,16 @@ namespace DataAccessObjects
         {
             try
             {
-                using(var context = new BirdClinicDBContext())
+                using (var context = new BirdClinicDBContext())
                 {
                     var exist = context.TblUsers.FirstOrDefault(u => u.Email.Equals(email));
-                    if(exist != null)
+                    if (exist != null)
                     {
                         return false;
                     }
                 }
-            }catch(Exception ex )
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -205,7 +208,7 @@ namespace DataAccessObjects
         {
             try
             {
-                using(var context = new BirdClinicDBContext())
+                using (var context = new BirdClinicDBContext())
                 {
                     if (checkDuplicate(email))
                     {
@@ -224,7 +227,8 @@ namespace DataAccessObjects
                         return true;
                     }
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -303,12 +307,12 @@ namespace DataAccessObjects
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
-        
+
         public List<object> GetAppointmentsByVeterianarianId(int userId)
         {
             List<object> list = new List<object>();
@@ -347,7 +351,7 @@ namespace DataAccessObjects
         {
             try
             {
-                using(var context =  new BirdClinicDBContext())
+                using (var context = new BirdClinicDBContext())
                 {
                     TblAppointment appointment = context.TblAppointments.FirstOrDefault(a => a.AppointmentId == appointmentID);
                     if (appointment != null)
@@ -356,7 +360,8 @@ namespace DataAccessObjects
                         context.SaveChanges();
                     }
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -366,21 +371,22 @@ namespace DataAccessObjects
             TblAppointment appointment = null;
             try
             {
-                using(var context = new BirdClinicDBContext())
+                using (var context = new BirdClinicDBContext())
                 {
                     appointment = context.TblAppointments.Include(f => f.User).Include(f => f.Bird).FirstOrDefault(a => a.AppointmentId == id);
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
             return appointment;
         }
-        public void AddMedicalRecord(int userId, int birdId, int docId, DateTime date, string diagnosis , string intruction)
+        public void AddMedicalRecord(int userId, int birdId, int docId, DateTime date, string diagnosis, string intruction)
         {
             try
             {
-                using(var context = new BirdClinicDBContext())
+                using (var context = new BirdClinicDBContext())
                 {
                     TblMedicalRecord medicalRecord = new TblMedicalRecord()
                     {
@@ -394,10 +400,35 @@ namespace DataAccessObjects
                     context.TblMedicalRecords.Add(medicalRecord);
                     context.SaveChanges();
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
+
+        public Dictionary<int, string> GetUserNameByID()
+        {
+            Dictionary<int, string> ListUsername = new Dictionary<int, string>();
+            try
+            {
+                using (var context = new BirdClinicDBContext())
+                {
+                    var users = context.TblUsers.ToList(); // Retrieve all users from the database
+
+                    foreach (var user in users)
+                    {
+                        ListUsername.Add(user.UserId, user.FullName);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return ListUsername;
+        }
+
     }
+
 }

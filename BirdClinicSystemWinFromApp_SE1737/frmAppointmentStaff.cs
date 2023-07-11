@@ -14,6 +14,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
 {
     public partial class frmAppointmentStaff : Form
     {
+
         IAppointmentStaffRepository repository = new AppointmentStaffRepository();
         IAppointmentRepository appointmentRepository = new AppointmentRepository();
         string staffID = Properties.Settings.Default.MyStaff;
@@ -82,14 +83,24 @@ namespace BirdClinicSystemWinFromApp_SE1737
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            repository.Accept(Convert.ToInt32(txtAppointmentID.Text), Convert.ToInt32(txtStatus.Text = "2")
-                , appointmentRepository.GetUserIDByEmail(staffID), 4);
+            
+            if (txtDoctorID.Text.Equals(""))
+            {
+                frmChooseDoctor frmChooseDoctor = new frmChooseDoctor();
+                if (frmChooseDoctor.ShowDialog() == DialogResult.OK)
+                {
+                    
+                    int chosenDoctorID = frmChooseDoctor.ChosenDoctorID;
+                    repository.Accept(Convert.ToInt32(txtAppointmentID.Text), Convert.ToInt32(txtStatus.Text = "1")
+                        , appointmentRepository.GetUserIDByEmail(staffID),chosenDoctorID);
+                }
+            }                        
             GettblAppointment();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            repository.Accept(Convert.ToInt32(txtAppointmentID.Text), Convert.ToInt32(txtStatus.Text = "1"));
+            repository.Accept(Convert.ToInt32(txtAppointmentID.Text), Convert.ToInt32(txtStatus.Text = "2"));
             GettblAppointment();
         }
 

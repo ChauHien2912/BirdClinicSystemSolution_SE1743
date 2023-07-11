@@ -276,7 +276,7 @@
             Controls.Add(dgvAppoinmentStaff);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "frmAppointmentStaff";
-            Text = "frmAppointmentStaff";
+            Text = "Appointment Staff";
             ((System.ComponentModel.ISupportInitialize)dgvAppoinmentStaff).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -92,5 +92,10 @@ namespace Repositories
         {
             AppointmentDAO.Instance.InsertFeedback(feedback);
         }
+
+        public List<int> GetDoctorID()
+        {
+            return AppointmentDAO.Instance.GetDoctorID();
+        }
     }
 }

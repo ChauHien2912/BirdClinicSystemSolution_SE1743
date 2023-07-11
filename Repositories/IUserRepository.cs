@@ -25,6 +25,8 @@ namespace Repositories
 
         public void CreateUser(int roleID, String email, String password, String fullName, bool gender, String phone, String address);
 
+        Dictionary<int,string> GetUserNameByID();
+        
         public void AddMedicalRecord(int userId, int birdId, int docId, DateTime date, string diagnosis, string intruction);
     }
 }

@@ -43,5 +43,8 @@ namespace Repositories
 
         public IEnumerable getUser(bool i) => UserDAO.getAllCus(i);
         public void UpdateProfile(int id, string fullName, string emal, bool gender, string phoneNumber, string address) => UserDAO.Instance.UpdateProfile(id, fullName, emal, gender, phoneNumber, address);
+
+        public Dictionary<int,string> GetUserNameByID() => UserDAO.Instance.GetUserNameByID();
+        
     }
 }

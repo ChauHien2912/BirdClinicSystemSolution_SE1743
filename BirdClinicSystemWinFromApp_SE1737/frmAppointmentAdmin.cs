@@ -25,7 +25,6 @@ namespace BirdClinicSystemWinFromApp_SE1737
         IAppointmentRepository getAppointment = new AppointmentRepository();
 
 
-
         private void getListAppointment()
         {
             dGVListAppointment.DataSource = null;
@@ -55,7 +54,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
                 txtStatus.DataBindings.Add("Text", bindingSource, "Status");
                 txtServiceID.DataBindings.Add("Text", bindingSource, "ServiceID");
 
-
+               
 
                 dGVListAppointment.DataSource = bindingSource;
                 dGVListAppointment.Columns["AppointmentID"].Visible = true;
@@ -73,6 +72,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
                 dGVListAppointment.Columns["Staff"].Visible = false;
                 dGVListAppointment.Columns["User"].Visible = false;
                 dGVListAppointment.Columns["TblFeedbacks"].Visible = false;
+
 
             }
             catch (Exception ex)
@@ -116,6 +116,6 @@ namespace BirdClinicSystemWinFromApp_SE1737
             this.Show();
         }
 
-
+            
     }
 }

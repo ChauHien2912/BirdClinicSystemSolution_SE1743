@@ -76,6 +76,23 @@ namespace DataAccessObjects
         }
         #endregion
 
+
+        public List<int> GetDoctorID()
+        {
+            List<int> list=new List<int>();
+            try
+            {
+                using(var context = new BirdClinicDBContext())
+                {
+                    list = context.TblUsers
+                        .Where(u => u.RoleId == 4)
+                        .Select(u => u.UserId)
+                        .ToList();
+                }
+            }
+            catch (Exception ex) { }
+            return list;
+        }
         public void InsertFeedback(TblFeedback feedback)
         {
             try

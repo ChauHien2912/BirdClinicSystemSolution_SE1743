@@ -83,7 +83,7 @@
             // lblUserID
             // 
             lblUserID.AutoSize = true;
-            lblUserID.Location = new System.Drawing.Point(99, 208);
+            lblUserID.Location = new System.Drawing.Point(101, 204);
             lblUserID.Name = "lblUserID";
             lblUserID.Size = new System.Drawing.Size(53, 20);
             lblUserID.TabIndex = 2;
@@ -92,7 +92,7 @@
             // lblBirdID
             // 
             lblBirdID.AutoSize = true;
-            lblBirdID.Location = new System.Drawing.Point(99, 248);
+            lblBirdID.Location = new System.Drawing.Point(103, 244);
             lblBirdID.Name = "lblBirdID";
             lblBirdID.Size = new System.Drawing.Size(51, 20);
             lblBirdID.TabIndex = 3;
@@ -101,7 +101,7 @@
             // lblStaffID
             // 
             lblStaffID.AutoSize = true;
-            lblStaffID.Location = new System.Drawing.Point(99, 294);
+            lblStaffID.Location = new System.Drawing.Point(103, 290);
             lblStaffID.Name = "lblStaffID";
             lblStaffID.Size = new System.Drawing.Size(55, 20);
             lblStaffID.TabIndex = 4;
@@ -110,7 +110,7 @@
             // lblDoctorID
             // 
             lblDoctorID.AutoSize = true;
-            lblDoctorID.Location = new System.Drawing.Point(99, 339);
+            lblDoctorID.Location = new System.Drawing.Point(101, 335);
             lblDoctorID.Name = "lblDoctorID";
             lblDoctorID.Size = new System.Drawing.Size(70, 20);
             lblDoctorID.TabIndex = 5;
@@ -165,6 +165,7 @@
             txtUserID.Name = "txtUserID";
             txtUserID.Size = new System.Drawing.Size(224, 27);
             txtUserID.TabIndex = 11;
+            
             // 
             // txtBirdID
             // 
@@ -182,7 +183,7 @@
             // 
             // txtDoctorID
             // 
-            txtDoctorID.Location = new System.Drawing.Point(190, 332);
+            txtDoctorID.Location = new System.Drawing.Point(189, 332);
             txtDoctorID.Name = "txtDoctorID";
             txtDoctorID.Size = new System.Drawing.Size(224, 27);
             txtDoctorID.TabIndex = 14;
@@ -274,7 +275,7 @@
             ltlTilte.BackColor = System.Drawing.SystemColors.Control;
             ltlTilte.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8000011F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             ltlTilte.ForeColor = System.Drawing.Color.FromArgb(41, 128, 185);
-            ltlTilte.Location = new System.Drawing.Point(295, 58);
+            ltlTilte.Location = new System.Drawing.Point(297, 56);
             ltlTilte.Name = "ltlTilte";
             ltlTilte.Size = new System.Drawing.Size(277, 52);
             ltlTilte.TabIndex = 20;

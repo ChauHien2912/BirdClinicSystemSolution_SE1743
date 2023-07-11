@@ -11,6 +11,7 @@ namespace Repositories
     public interface IAppointmentRepository
     {
 
+        List<int> GetDoctorID();
         List<TblFeedback> GetFeedbackFromAppointmentID(int ID);
 
         void InsertFeedback(TblFeedback feedback);
