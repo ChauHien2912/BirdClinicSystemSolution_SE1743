@@ -14,6 +14,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
         [STAThread]
         static void Main()
         {
+            // Main
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
