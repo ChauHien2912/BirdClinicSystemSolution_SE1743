@@ -40,6 +40,8 @@
             txtDiagnosis = new System.Windows.Forms.TextBox();
             txtIntruction = new System.Windows.Forms.TextBox();
             btnSave = new System.Windows.Forms.Button();
+            cbService = new System.Windows.Forms.ComboBox();
+            label5 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,7 +86,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(100, 220);
+            label3.Location = new System.Drawing.Point(100, 269);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(74, 20);
             label3.TabIndex = 23;
@@ -93,7 +95,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(100, 311);
+            label4.Location = new System.Drawing.Point(100, 362);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(72, 20);
             label4.TabIndex = 24;
@@ -117,7 +119,7 @@
             // 
             // txtDiagnosis
             // 
-            txtDiagnosis.Location = new System.Drawing.Point(268, 220);
+            txtDiagnosis.Location = new System.Drawing.Point(268, 269);
             txtDiagnosis.Multiline = true;
             txtDiagnosis.Name = "txtDiagnosis";
             txtDiagnosis.Size = new System.Drawing.Size(235, 77);
@@ -125,7 +127,7 @@
             // 
             // txtIntruction
             // 
-            txtIntruction.Location = new System.Drawing.Point(268, 311);
+            txtIntruction.Location = new System.Drawing.Point(268, 362);
             txtIntruction.Multiline = true;
             txtIntruction.Name = "txtIntruction";
             txtIntruction.Size = new System.Drawing.Size(235, 77);
@@ -139,7 +141,7 @@
             btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            btnSave.Location = new System.Drawing.Point(393, 404);
+            btnSave.Location = new System.Drawing.Point(393, 445);
             btnSave.Name = "btnSave";
             btnSave.Size = new System.Drawing.Size(110, 33);
             btnSave.TabIndex = 39;
@@ -147,11 +149,30 @@
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
+            // cbService
+            // 
+            cbService.FormattingEnabled = true;
+            cbService.Location = new System.Drawing.Point(268, 220);
+            cbService.Name = "cbService";
+            cbService.Size = new System.Drawing.Size(235, 28);
+            cbService.TabIndex = 40;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(100, 228);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(56, 20);
+            label5.TabIndex = 41;
+            label5.Text = "Service";
+            // 
             // frmMedicalRecordVeterinarian
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(699, 490);
+            Controls.Add(label5);
+            Controls.Add(cbService);
             Controls.Add(btnSave);
             Controls.Add(txtIntruction);
             Controls.Add(txtDiagnosis);
@@ -185,5 +206,7 @@
         private System.Windows.Forms.TextBox txtDiagnosis;
         private System.Windows.Forms.TextBox txtIntruction;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ComboBox cbService;
+        private System.Windows.Forms.Label label5;
     }
 }

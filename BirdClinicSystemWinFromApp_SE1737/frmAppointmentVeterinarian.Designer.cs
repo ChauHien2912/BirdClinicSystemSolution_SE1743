@@ -56,6 +56,7 @@
             createToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             btnSave = new System.Windows.Forms.Button();
+            btnComplete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dtgvAppointments).BeginInit();
             panel1.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -296,17 +297,34 @@
             btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             btnSave.Location = new System.Drawing.Point(803, 458);
             btnSave.Name = "btnSave";
-            btnSave.Size = new System.Drawing.Size(250, 52);
+            btnSave.Size = new System.Drawing.Size(250, 36);
             btnSave.TabIndex = 23;
-            btnSave.Text = "Save to medical course";
+            btnSave.Text = "Create medical course";
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
+            // 
+            // btnComplete
+            // 
+            btnComplete.BackColor = System.Drawing.Color.FromArgb(41, 128, 185);
+            btnComplete.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnComplete.FlatAppearance.BorderSize = 0;
+            btnComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnComplete.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnComplete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            btnComplete.Location = new System.Drawing.Point(803, 509);
+            btnComplete.Name = "btnComplete";
+            btnComplete.Size = new System.Drawing.Size(250, 36);
+            btnComplete.TabIndex = 24;
+            btnComplete.Text = "Complete";
+            btnComplete.UseVisualStyleBackColor = false;
+            btnComplete.Click += btnComplete_Click_1;
             // 
             // frmAppointmentVeterinarian
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1109, 672);
+            Controls.Add(btnComplete);
             Controls.Add(btnSave);
             Controls.Add(lbPrice);
             Controls.Add(txtService);
@@ -368,5 +386,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnComplete;
     }
 }

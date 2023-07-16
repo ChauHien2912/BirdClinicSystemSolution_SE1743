@@ -55,6 +55,16 @@ namespace BirdClinicSystemWinFromApp_SE1737
 
             dtgvAppointments.DataSource = bindingSource;
         }
+        private bool MessageBoxQuestion(string content)
+        {
+            DialogResult d = MessageBox.Show(content, Text + " - Notification", MessageBoxButtons.OKCancel,
+                                             MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (d == DialogResult.OK)
+            {
+                return true;
+            }
+            return false;
+        }
         #endregion
 
         #region Methods
@@ -101,9 +111,14 @@ namespace BirdClinicSystemWinFromApp_SE1737
             frmBlogAction.ShowDialog();
             this.Show();
         }
+        private void btnComplete_Click_1(object sender, EventArgs e)
+        {
+            if(MessageBoxQuestion("Do you want to complete"))
+            {
+                userRepository.CompleteAppointment(Convert.ToInt32(txtAppointmentID.Text));
+                LoadAppointments();
+            }
+        }
         #endregion
-
-
-
     }
 }
