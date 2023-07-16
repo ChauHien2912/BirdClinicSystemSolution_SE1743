@@ -15,6 +15,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
     public partial class frmMedicalRecordVeterinarian : Form
     {
         IUserRepository userRepository = new UserRepository();
+        IServiceRepository serviceRepository = new ServiceRepository();
         private int AppointmentId { get; set; }
 
         TblAppointment Appointment { get; set; }
@@ -23,12 +24,19 @@ namespace BirdClinicSystemWinFromApp_SE1737
             InitializeComponent();
             this.AppointmentId = id;
             Load();
+            LoadServices();
         }
         public void Load()
         {
             Appointment = userRepository.GetAppointmentById(AppointmentId);
             txtCustomerName.Text = Appointment.User.FullName;
             txtBird.Text = Appointment.Bird.Species;
+        }
+        public void LoadServices()
+        {
+            cbService.DataSource = serviceRepository.GetAllServices();
+            cbService.DisplayMember = "ServiceName";
+            cbService.ValueMember = "ServiceId";
         }
 
         private bool MessageBoxQuestion(string content)
@@ -46,7 +54,6 @@ namespace BirdClinicSystemWinFromApp_SE1737
             if (MessageBoxQuestion("Do you want to save?"))
             {
                 userRepository.AddMedicalRecord((int)Appointment.UserId, (int)Appointment.BirdId, (int)Appointment.DoctorId, DateTime.Now, txtDiagnosis.Text, txtIntruction.Text);
-                userRepository.CompleteAppointment(AppointmentId);
                 this.Close();
             }
         }

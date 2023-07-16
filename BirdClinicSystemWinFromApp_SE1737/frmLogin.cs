@@ -55,6 +55,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
                 {
 
                     Properties.Settings.Default.MyAccount = txtEmail.Text;
+                    Properties.Settings.Default.MyRole = 3;
                     frmHome frmHome = new frmHome();
                     frmHome.ShowDialog();
 

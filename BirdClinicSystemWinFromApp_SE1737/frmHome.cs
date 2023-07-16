@@ -104,5 +104,11 @@ namespace BirdClinicSystemWinFromApp_SE1737
         {
             GetUser();
         }
+
+        private void btnBlog_Click(object sender, EventArgs e)
+        {
+            frmBlog frmBlog = new frmBlog();
+            frmBlog.ShowDialog();
+        }
     }
 }

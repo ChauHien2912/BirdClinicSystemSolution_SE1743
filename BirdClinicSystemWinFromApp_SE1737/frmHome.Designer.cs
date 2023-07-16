@@ -51,6 +51,7 @@
             pictureBox5 = new System.Windows.Forms.PictureBox();
             label7 = new System.Windows.Forms.Label();
             pictureBox6 = new System.Windows.Forms.PictureBox();
+            btnBlog = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -278,11 +279,24 @@
             pictureBox6.TabIndex = 6;
             pictureBox6.TabStop = false;
             // 
+            // btnBlog
+            // 
+            btnBlog.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            btnBlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnBlog.Location = new System.Drawing.Point(663, 339);
+            btnBlog.Name = "btnBlog";
+            btnBlog.Size = new System.Drawing.Size(163, 29);
+            btnBlog.TabIndex = 25;
+            btnBlog.Text = "View Blog";
+            btnBlog.UseVisualStyleBackColor = false;
+            btnBlog.Click += btnBlog_Click;
+            // 
             // frmHome
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(894, 503);
+            Controls.Add(btnBlog);
             Controls.Add(panel2);
             Controls.Add(txtAddress);
             Controls.Add(txtPhone);
@@ -340,5 +354,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btnBlog;
     }
 }

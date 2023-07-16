@@ -18,6 +18,12 @@ namespace BirdClinicSystemWinFromApp_SE1737
         {
             InitializeComponent();
             LoadBlogs();
+            if(Properties.Settings.Default.MyRole == 3) 
+            {
+                btnAdd.Visible = false;
+                btnRemove.Visible = false;
+                btnUpdate.Visible = false;
+            }
         }
         #region Methods
         private void LoadBlogs()
