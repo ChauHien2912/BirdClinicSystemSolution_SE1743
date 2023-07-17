@@ -228,18 +228,18 @@ namespace DataAccessObjects
             return name;
         }
 
-        public List<string> GetBirdType()
+        public List<int> GetBirdID(String email)
         {
-            List<string> name = null;
+            List<int> name = null;
             try
             {
                 using (var context = new BirdClinicDBContext())
                 {
 
-                    name = context.TblBirds
-                        .Select(s => s.Species)
-                        .ToList();
-
+                    name =(from b in context.TblBirds
+                          where b.UserId.Equals(GetUserIDByEmail(email))
+                          select b.BirdId)
+                          .ToList();                        
                 }
             }
             catch (Exception ex)
@@ -341,7 +341,7 @@ namespace DataAccessObjects
             return name;
         }
 
-        public string GetBirdTypeByID(int id)
+        public string GetBirdNameByID(int id)
         {
             string name;
             try
@@ -351,7 +351,7 @@ namespace DataAccessObjects
 
                     name = context.TblBirds
                         .Where(s => s.BirdId == id)
-                        .Select(s => s.Species)
+                        .Select(s => s.Name)
                         .FirstOrDefault();
 
                 }

@@ -16,14 +16,16 @@ namespace BirdClinicSystemWinFromApp_SE1737
         IBlogRepository blogRepository = new BlogRepository();
         public frmBlog()
         {
+            var role = Properties.Settings.Default.MyRole;
             InitializeComponent();
             LoadBlogs();
-            if(Properties.Settings.Default.MyRole == 3) 
+            if( role==3||role==0) 
             {
                 btnAdd.Visible = false;
                 btnRemove.Visible = false;
                 btnUpdate.Visible = false;
             }
+            
         }
         #region Methods
         private void LoadBlogs()

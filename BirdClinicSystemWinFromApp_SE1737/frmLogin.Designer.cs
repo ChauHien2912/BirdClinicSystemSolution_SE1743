@@ -54,6 +54,9 @@
             label10 = new System.Windows.Forms.Label();
             linkLabel1 = new System.Windows.Forms.LinkLabel();
             linkLabel2 = new System.Windows.Forms.LinkLabel();
+            label11 = new System.Windows.Forms.Label();
+            btnBlog = new System.Windows.Forms.Button();
+            btnFeedback = new System.Windows.Forms.Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -345,12 +348,57 @@
             linkLabel2.Text = "Register";
             linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label11.ForeColor = System.Drawing.Color.FromArgb(41, 128, 185);
+            label11.Location = new System.Drawing.Point(395, 390);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(433, 34);
+            label11.TabIndex = 20;
+            label11.Text = "View our blogs and feedbacks";
+            // 
+            // btnBlog
+            // 
+            btnBlog.BackColor = System.Drawing.Color.FromArgb(41, 128, 185);
+            btnBlog.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnBlog.FlatAppearance.BorderSize = 0;
+            btnBlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnBlog.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnBlog.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            btnBlog.Location = new System.Drawing.Point(395, 466);
+            btnBlog.Name = "btnBlog";
+            btnBlog.Size = new System.Drawing.Size(193, 42);
+            btnBlog.TabIndex = 21;
+            btnBlog.Text = "Blog";
+            btnBlog.UseVisualStyleBackColor = false;
+            btnBlog.Click += btnBlog_Click;
+            // 
+            // btnFeedback
+            // 
+            btnFeedback.BackColor = System.Drawing.Color.FromArgb(41, 128, 185);
+            btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnFeedback.FlatAppearance.BorderSize = 0;
+            btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnFeedback.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnFeedback.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            btnFeedback.Location = new System.Drawing.Point(614, 466);
+            btnFeedback.Name = "btnFeedback";
+            btnFeedback.Size = new System.Drawing.Size(193, 42);
+            btnFeedback.TabIndex = 22;
+            btnFeedback.Text = "Feedback";
+            btnFeedback.UseVisualStyleBackColor = false;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(907, 642);
             ControlBox = false;
+            Controls.Add(btnFeedback);
+            Controls.Add(btnBlog);
+            Controls.Add(label11);
             Controls.Add(linkLabel2);
             Controls.Add(linkLabel1);
             Controls.Add(label10);
@@ -409,5 +457,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnBlog;
+        private System.Windows.Forms.Button btnFeedback;
     }
 }

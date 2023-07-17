@@ -22,11 +22,10 @@ namespace BirdClinicSystemWinFromApp_SE1737
         {
             InitializeComponent();
         }
-
         #region
         private void AddItemToBox()
         {
-            var bird = AppointmentRepository.GetBirdType().ToList();
+            var bird = AppointmentRepository.GetBirdID(user).ToList();
             foreach (var item in bird)
             {
                 cbbBirdID.Items.Add(item);
@@ -46,6 +45,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
             AddItemToBox();
             cbbBirdID.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbService.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -53,19 +53,23 @@ namespace BirdClinicSystemWinFromApp_SE1737
             try
             {
                 // Validate input fields
-                if (string.IsNullOrWhiteSpace(mskDate.Text))
+                if (string.IsNullOrWhiteSpace(dtpDate.Text))
                 {
                     MessageBox.Show("Please enter a date.");
                     return;
                 }
 
-                if (string.IsNullOrWhiteSpace(mskTime.Text))
+                if (string.IsNullOrWhiteSpace(cbbBirdID.Text))
                 {
-                    MessageBox.Show("Please enter a time.");
+                    MessageBox.Show("Please select a bird ID.");
                     return;
                 }
-
-                if (string.IsNullOrWhiteSpace(cbbBirdID.Text))
+                if (string.IsNullOrWhiteSpace(cbbHour.Text))
+                {
+                    MessageBox.Show("Please select a bird ID.");
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(cbbMinute.Text))
                 {
                     MessageBox.Show("Please select a bird ID.");
                     return;
@@ -77,46 +81,37 @@ namespace BirdClinicSystemWinFromApp_SE1737
                     return;
                 }
 
-                DateTime appointmentDate;
-
-                if (DateTime.TryParseExact(mskDate.Text, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out appointmentDate))
+                DateTime selectedDate = dtpDate.Value.Date;
+                DateTime currentDate = DateTime.Now.Date;
+                if (selectedDate < currentDate)
                 {
-                    string unmaskedTime = mskTime.Text.Replace(":", ""); // Remove any colons from the masked time
-
-                    TimeSpan appointmentTime;
-
-                    if (TimeSpan.TryParseExact(unmaskedTime, "hhmm", null, System.Globalization.TimeSpanStyles.None, out appointmentTime))
-                    {
-                        var appointment = new TblAppointment
-                        {
-                            UserId = AppointmentRepository.GetUserIDByEmail(user),
-                            BirdId = AppointmentRepository.GetBirdIDByType(cbbBirdID.Text),
-                            AppointmentDate = appointmentDate,
-                            AppointmentTime = appointmentTime,
-                            Status = 0,
-                            ServiceId = AppointmentRepository.GetServiceIDByName(cbbService.Text)
-                        };
-
-                        AppointmentRepository.insertAppointment(appointment);
-                        Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid time format. Please enter a valid time in 24-hour format (e.g., HH:mm).");
-                    }
+                    MessageBox.Show("Please select a date greater than the current day.");
+                    return;
                 }
-                else
+                // Validate time
+                TimeSpan selectedTime = TimeSpan.Parse(cbbHour.SelectedItem.ToString() + ":" + cbbMinute.SelectedItem.ToString());
+                var appointment = new TblAppointment
                 {
-                    MessageBox.Show("Invalid date format. Please enter a valid date in dd/mm/yyyy format.");
+                    UserId = AppointmentRepository.GetUserIDByEmail(user),
+                    BirdId = Int32.Parse(cbbBirdID.SelectedItem.ToString()),
+                    AppointmentDate = selectedDate,
+                    AppointmentTime =selectedTime,
+                    Status = 0,
+                    ServiceId = AppointmentRepository.GetServiceIDByName(cbbService.Text)
+                };
+
+                AppointmentRepository.insertAppointment(appointment);
+
+                DialogResult result = MessageBox.Show("Appointment created successfully.", "Appointment", MessageBoxButtons.OK);
+                if (result == DialogResult.OK)
+                {
+                    Close();
                 }
             }
             catch (Exception)
             {
-                throw new Exception();
+                MessageBox.Show("An error occurred while creating the appointment.");
             }
-            DialogResult d;
-            d = MessageBox.Show("Create Completed", "Appointment",
-                MessageBoxButtons.OK);
         }
 
 
@@ -125,5 +120,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
         {
             Close();
         }
+
+
     }
 }

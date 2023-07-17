@@ -111,7 +111,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
                 txtStaffID.Text = AppointmentRepository.getDoctorAndStaff(staffID);
             }
 
-            txtBirdID.Text = AppointmentRepository.GetBirdTypeByID(int.Parse(txtBirdID.Text));
+            // txtBirdID.Text = AppointmentRepository.GetBirdNameByID(int.Parse(txtBirdID.Text));
 
 
             txtBirdID.ReadOnly = true;
@@ -126,6 +126,10 @@ namespace BirdClinicSystemWinFromApp_SE1737
 
         private void cbbAppointmentID_SelectedValueChanged(object sender, EventArgs e)
         {
+            btnDelete.Enabled = true;
+            btnDelete.BackColor = Color.OrangeRed;
+            btnFeedBack.Enabled = true;
+            btnFeedBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
             int selectedValue = (int)cbbAppointmentID.SelectedItem;
             var appointment = AppointmentRepository
                 .GetAllAppointmentsByEmail(user)
@@ -135,14 +139,19 @@ namespace BirdClinicSystemWinFromApp_SE1737
             if (txtStatusID.Text == "Approved")
             {
                 btnPay.Enabled = true;
+                btnDelete.Enabled = false;
+                btnDelete.BackColor = SystemColors.Control;
             }
             if (txtStatusID.Text == "Completed")
             {
                 btnFeedBack.Enabled = true;
+                btnDelete.Enabled = false;
+                btnDelete.BackColor = SystemColors.Control;
             }
             else
             {
                 btnFeedBack.Enabled = false;
+                btnFeedBack.BackColor = SystemColors.Control;
             }
 
         }

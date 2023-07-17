@@ -31,9 +31,9 @@ namespace Repositories
             return AppointmentDAO.Instance.GetBirdIDByType(type);
         }
 
-        public List<string> GetBirdType()
+        public List<int> GetBirdID(String email)
         {
-            return AppointmentDAO.Instance.GetBirdType();
+            return AppointmentDAO.Instance.GetBirdID(email);
         }
 
         public string getDoctorAndStaff(int ID)
@@ -71,9 +71,9 @@ namespace Repositories
             AppointmentDAO.Instance.insertAppointment(appointment);
         }
 
-        public String GetBirdTypeByID(int ID)
+        public String GetBirdNameByID(int ID)
         {
-            return AppointmentDAO.Instance.GetBirdTypeByID((int)ID);
+            return AppointmentDAO.Instance.GetBirdNameByID((int)ID);
         }
 
         public double GetTotal(string ID)
