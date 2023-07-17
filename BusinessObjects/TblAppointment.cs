@@ -20,7 +20,7 @@ namespace BusinessObjects
         public DateTime? AppointmentDate { get; set; }
         public TimeSpan? AppointmentTime { get; set; }
         public int? Status { get; set; }
-        public int ServiceId { get; set; }
+        public int? ServiceId { get; set; }
 
         public virtual TblBird Bird { get; set; }
         public virtual TblUser Doctor { get; set; }

@@ -19,7 +19,10 @@ namespace BusinessObjects
         public int? Age { get; set; }
         public double? Weight { get; set; }
         public string Description { get; set; }
+        public int? UserId { get; set; }
+        public string Name { get; set; }
 
+        public virtual TblUser User { get; set; }
         public virtual ICollection<TblAppointment> TblAppointments { get; set; }
         public virtual ICollection<TblMedicalRecord> TblMedicalRecords { get; set; }
     }

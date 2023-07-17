@@ -12,6 +12,7 @@ namespace BusinessObjects
             TblAppointmentDoctors = new HashSet<TblAppointment>();
             TblAppointmentStaffs = new HashSet<TblAppointment>();
             TblAppointmentUsers = new HashSet<TblAppointment>();
+            TblBirds = new HashSet<TblBird>();
             TblBlogs = new HashSet<TblBlog>();
             TblMedicalRecordDoctors = new HashSet<TblMedicalRecord>();
             TblMedicalRecordUsers = new HashSet<TblMedicalRecord>();
@@ -30,6 +31,7 @@ namespace BusinessObjects
         public virtual ICollection<TblAppointment> TblAppointmentDoctors { get; set; }
         public virtual ICollection<TblAppointment> TblAppointmentStaffs { get; set; }
         public virtual ICollection<TblAppointment> TblAppointmentUsers { get; set; }
+        public virtual ICollection<TblBird> TblBirds { get; set; }
         public virtual ICollection<TblBlog> TblBlogs { get; set; }
         public virtual ICollection<TblMedicalRecord> TblMedicalRecordDoctors { get; set; }
         public virtual ICollection<TblMedicalRecord> TblMedicalRecordUsers { get; set; }
