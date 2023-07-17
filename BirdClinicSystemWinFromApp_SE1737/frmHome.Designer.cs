@@ -134,7 +134,7 @@
             // 
             pictureBox7.BackColor = System.Drawing.Color.FromArgb(41, 128, 185);
             pictureBox7.Image = (System.Drawing.Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new System.Drawing.Point(3, 11);
+            pictureBox7.Location = new System.Drawing.Point(3, 3);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new System.Drawing.Size(100, 100);
             pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

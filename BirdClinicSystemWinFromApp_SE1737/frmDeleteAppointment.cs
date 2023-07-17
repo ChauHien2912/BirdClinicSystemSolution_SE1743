@@ -26,6 +26,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
         public frmDeleteAppointment()
         {
             InitializeComponent();
+
         }
 
         private void frmDeleteAppointment_Load(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
             if (!DeleteOrPay)
             {
                 btnDelete.Text = "Pay";
+                
             }
         }
 

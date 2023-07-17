@@ -33,11 +33,11 @@ namespace Repositories
 
         void deleteAppointment(TblAppointment appointment);
 
-        List<String> GetBirdType();
+        List<int> GetBirdID(String email);
 
         List<String> GetServices();
 
-        string GetBirdTypeByID(int ID);
+        string GetBirdNameByID(int ID);
 
         double GetTotal(string ID);
 

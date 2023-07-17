@@ -44,7 +44,7 @@ namespace BirdClinicSystemWinFromApp_SE1737
             txtDoctorID.DataBindings.Add("Text", source, "DoctorID");
             txtInstruction.DataBindings.Add("Text", source, "Intruction");
 
-            txtBirdID.Text = AppointmentRepository.GetBirdTypeByID(int.Parse(txtBirdID.Text));
+            txtBirdID.Text = AppointmentRepository.GetBirdNameByID(int.Parse(txtBirdID.Text));
             int doctorID = Int32.Parse(txtDoctorID.Text);
             txtDoctorID.Text = AppointmentRepository.getDoctorAndStaff(doctorID);
         }

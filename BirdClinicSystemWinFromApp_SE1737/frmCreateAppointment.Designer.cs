@@ -38,9 +38,10 @@
             btnCreate = new System.Windows.Forms.Button();
             btnCancel = new System.Windows.Forms.Button();
             cbbBirdID = new System.Windows.Forms.ComboBox();
-            mskDate = new System.Windows.Forms.MaskedTextBox();
-            mskTime = new System.Windows.Forms.MaskedTextBox();
             cbbService = new System.Windows.Forms.ComboBox();
+            dtpDate = new System.Windows.Forms.DateTimePicker();
+            cbbHour = new System.Windows.Forms.ComboBox();
+            cbbMinute = new System.Windows.Forms.ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -57,9 +58,9 @@
             label2.AutoSize = true;
             label2.Location = new System.Drawing.Point(54, 69);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(71, 20);
+            label2.Size = new System.Drawing.Size(55, 20);
             label2.TabIndex = 1;
-            label2.Text = "Bird Tpye";
+            label2.Text = "Bird ID";
             // 
             // label3
             // 
@@ -101,7 +102,7 @@
             btnCreate.BackColor = System.Drawing.Color.FromArgb(41, 128, 185);
             btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnCreate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            btnCreate.Location = new System.Drawing.Point(93, 212);
+            btnCreate.Location = new System.Drawing.Point(150, 212);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new System.Drawing.Size(94, 29);
             btnCreate.TabIndex = 10;
@@ -113,7 +114,7 @@
             // 
             btnCancel.BackColor = System.Drawing.Color.Red;
             btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnCancel.Location = new System.Drawing.Point(193, 212);
+            btnCancel.Location = new System.Drawing.Point(250, 212);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new System.Drawing.Size(94, 29);
             btnCancel.TabIndex = 11;
@@ -129,24 +130,6 @@
             cbbBirdID.Size = new System.Drawing.Size(151, 28);
             cbbBirdID.TabIndex = 12;
             // 
-            // mskDate
-            // 
-            mskDate.Location = new System.Drawing.Point(193, 100);
-            mskDate.Mask = "00/00/0000";
-            mskDate.Name = "mskDate";
-            mskDate.Size = new System.Drawing.Size(125, 27);
-            mskDate.TabIndex = 13;
-            mskDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // mskTime
-            // 
-            mskTime.Location = new System.Drawing.Point(194, 133);
-            mskTime.Mask = "00:00";
-            mskTime.Name = "mskTime";
-            mskTime.Size = new System.Drawing.Size(125, 27);
-            mskTime.TabIndex = 14;
-            mskTime.ValidatingType = typeof(System.DateTime);
-            // 
             // cbbService
             // 
             cbbService.FormattingEnabled = true;
@@ -155,14 +138,43 @@
             cbbService.Size = new System.Drawing.Size(151, 28);
             cbbService.TabIndex = 15;
             // 
+            // dtpDate
+            // 
+            dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpDate.Location = new System.Drawing.Point(193, 100);
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new System.Drawing.Size(250, 27);
+            dtpDate.TabIndex = 16;
+            // 
+            // cbbHour
+            // 
+            cbbHour.FormattingEnabled = true;
+            cbbHour.Items.AddRange(new object[] { "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19" });
+            cbbHour.Location = new System.Drawing.Point(194, 132);
+            cbbHour.Name = "cbbHour";
+            cbbHour.Size = new System.Drawing.Size(62, 28);
+            cbbHour.TabIndex = 17;
+            cbbHour.Text = "Hour";
+            // 
+            // cbbMinute
+            // 
+            cbbMinute.FormattingEnabled = true;
+            cbbMinute.Items.AddRange(new object[] { "00", "15", "30", "45" });
+            cbbMinute.Location = new System.Drawing.Point(262, 132);
+            cbbMinute.Name = "cbbMinute";
+            cbbMinute.Size = new System.Drawing.Size(83, 28);
+            cbbMinute.TabIndex = 18;
+            cbbMinute.Text = "Minute";
+            // 
             // frmCreateAppointment
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(377, 301);
+            ClientSize = new System.Drawing.Size(494, 301);
+            Controls.Add(cbbMinute);
+            Controls.Add(cbbHour);
+            Controls.Add(dtpDate);
             Controls.Add(cbbService);
-            Controls.Add(mskTime);
-            Controls.Add(mskDate);
             Controls.Add(cbbBirdID);
             Controls.Add(btnCancel);
             Controls.Add(btnCreate);
@@ -191,8 +203,10 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox cbbBirdID;
-        private System.Windows.Forms.MaskedTextBox mskDate;
-        private System.Windows.Forms.MaskedTextBox mskTime;
         private System.Windows.Forms.ComboBox cbbService;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.DateTimePicker dtpTime;
+        private System.Windows.Forms.ComboBox cbbHour;
+        private System.Windows.Forms.ComboBox cbbMinute;
     }
 }
