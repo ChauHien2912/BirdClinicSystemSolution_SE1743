@@ -52,6 +52,7 @@
             label7 = new System.Windows.Forms.Label();
             pictureBox6 = new System.Windows.Forms.PictureBox();
             btnBlog = new System.Windows.Forms.Button();
+            btnBird = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -86,9 +87,9 @@
             btnViewService.BackColor = System.Drawing.SystemColors.ActiveCaption;
             btnViewService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnViewService.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            btnViewService.Location = new System.Drawing.Point(213, 339);
+            btnViewService.Location = new System.Drawing.Point(99, 340);
             btnViewService.Name = "btnViewService";
-            btnViewService.Size = new System.Drawing.Size(104, 29);
+            btnViewService.Size = new System.Drawing.Size(127, 48);
             btnViewService.TabIndex = 4;
             btnViewService.Text = "View Service";
             btnViewService.UseVisualStyleBackColor = false;
@@ -98,9 +99,9 @@
             // 
             btnViewMedicalRecord.BackColor = System.Drawing.SystemColors.ActiveCaption;
             btnViewMedicalRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnViewMedicalRecord.Location = new System.Drawing.Point(323, 339);
+            btnViewMedicalRecord.Location = new System.Drawing.Point(232, 340);
             btnViewMedicalRecord.Name = "btnViewMedicalRecord";
-            btnViewMedicalRecord.Size = new System.Drawing.Size(165, 29);
+            btnViewMedicalRecord.Size = new System.Drawing.Size(165, 48);
             btnViewMedicalRecord.TabIndex = 5;
             btnViewMedicalRecord.Text = "View Medical Record";
             btnViewMedicalRecord.UseVisualStyleBackColor = false;
@@ -110,9 +111,9 @@
             // 
             button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Location = new System.Drawing.Point(494, 339);
+            button1.Location = new System.Drawing.Point(403, 340);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(163, 29);
+            button1.Size = new System.Drawing.Size(163, 48);
             button1.TabIndex = 6;
             button1.Text = "View Appointment";
             button1.UseVisualStyleBackColor = false;
@@ -125,7 +126,7 @@
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(pictureBox2);
-            panel1.Location = new System.Drawing.Point(3, 1);
+            panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(889, 125);
             panel1.TabIndex = 16;
@@ -144,7 +145,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.line_removebg_preview;
-            pictureBox3.Location = new System.Drawing.Point(760, 82);
+            pictureBox3.Location = new System.Drawing.Point(759, 88);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new System.Drawing.Size(127, 34);
             pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +252,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.line_removebg_preview;
-            pictureBox5.Location = new System.Drawing.Point(771, 60);
+            pictureBox5.Location = new System.Drawing.Point(764, 60);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new System.Drawing.Size(127, 34);
             pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,19 +284,32 @@
             // 
             btnBlog.BackColor = System.Drawing.SystemColors.ActiveCaption;
             btnBlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnBlog.Location = new System.Drawing.Point(663, 339);
+            btnBlog.Location = new System.Drawing.Point(571, 340);
             btnBlog.Name = "btnBlog";
-            btnBlog.Size = new System.Drawing.Size(163, 29);
+            btnBlog.Size = new System.Drawing.Size(118, 48);
             btnBlog.TabIndex = 25;
             btnBlog.Text = "View Blog";
             btnBlog.UseVisualStyleBackColor = false;
             btnBlog.Click += btnBlog_Click;
             // 
+            // btnBird
+            // 
+            btnBird.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            btnBird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnBird.Location = new System.Drawing.Point(695, 340);
+            btnBird.Name = "btnBird";
+            btnBird.Size = new System.Drawing.Size(118, 48);
+            btnBird.TabIndex = 26;
+            btnBird.Text = "Bird";
+            btnBird.UseVisualStyleBackColor = false;
+            btnBird.Click += btnBird_Click;
+            // 
             // frmHome
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(894, 503);
+            ClientSize = new System.Drawing.Size(888, 503);
+            Controls.Add(btnBird);
             Controls.Add(btnBlog);
             Controls.Add(panel2);
             Controls.Add(txtAddress);
@@ -355,5 +369,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btnBlog;
+        private System.Windows.Forms.Button btnBird;
     }
 }

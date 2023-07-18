@@ -160,8 +160,6 @@ namespace BirdClinicSystemWinFromApp_SE1737
         {
             frmCreateAppointment frmCreateAppointment = new frmCreateAppointment();
             frmCreateAppointment.ShowDialog();
-
-
             AddAppointmentIDToBox();
         }
 
