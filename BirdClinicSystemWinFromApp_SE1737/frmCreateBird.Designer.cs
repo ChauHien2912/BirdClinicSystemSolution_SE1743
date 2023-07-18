@@ -148,22 +148,26 @@
             // 
             // btnCreate
             // 
+            btnCreate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnCreate.Location = new System.Drawing.Point(28, 291);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new System.Drawing.Size(94, 29);
             btnCreate.TabIndex = 12;
             btnCreate.Text = "Create";
-            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.UseVisualStyleBackColor = false;
             btnCreate.Click += btnCreate_Click;
             // 
             // btnCancel
             // 
+            btnCancel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnCancel.Location = new System.Drawing.Point(141, 291);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new System.Drawing.Size(94, 29);
             btnCancel.TabIndex = 13;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
             // frmCreateBird

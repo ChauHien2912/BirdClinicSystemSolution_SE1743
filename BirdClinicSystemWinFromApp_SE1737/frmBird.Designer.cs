@@ -41,7 +41,6 @@
             label1 = new System.Windows.Forms.Label();
             cbbBridID = new System.Windows.Forms.ComboBox();
             label2 = new System.Windows.Forms.Label();
-            txtSpecie = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
             txtGender = new System.Windows.Forms.TextBox();
             txtAge = new System.Windows.Forms.TextBox();
@@ -188,13 +187,6 @@
             label2.TabIndex = 21;
             label2.Text = "Specie";
             // 
-            // txtSpecie
-            // 
-            txtSpecie.Location = new System.Drawing.Point(564, 261);
-            txtSpecie.Name = "txtSpecie";
-            txtSpecie.Size = new System.Drawing.Size(125, 27);
-            txtSpecie.TabIndex = 22;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -339,7 +331,6 @@
             Controls.Add(label4);
             Controls.Add(txtGender);
             Controls.Add(label3);
-            Controls.Add(txtSpecie);
             Controls.Add(label2);
             Controls.Add(cbbBridID);
             Controls.Add(label1);
@@ -376,7 +367,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbbBridID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSpecie;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.TextBox txtAge;
