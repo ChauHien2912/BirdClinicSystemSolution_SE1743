@@ -152,28 +152,28 @@
             txtFullName.Location = new System.Drawing.Point(216, 103);
             txtFullName.Name = "txtFullName";
             txtFullName.Size = new System.Drawing.Size(224, 27);
-            txtFullName.TabIndex = 29;
+            txtFullName.TabIndex = 0;
             // 
             // txtEmail
             // 
             txtEmail.Location = new System.Drawing.Point(216, 143);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new System.Drawing.Size(224, 27);
-            txtEmail.TabIndex = 30;
+            txtEmail.TabIndex = 1;
             // 
             // txtAddress
             // 
             txtAddress.Location = new System.Drawing.Point(216, 271);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new System.Drawing.Size(224, 27);
-            txtAddress.TabIndex = 33;
+            txtAddress.TabIndex = 4;
             // 
             // txtPassword
             // 
             txtPassword.Location = new System.Drawing.Point(216, 320);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new System.Drawing.Size(224, 27);
-            txtPassword.TabIndex = 34;
+            txtPassword.TabIndex = 5;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // txtConfirmPassword
@@ -181,7 +181,7 @@
             txtConfirmPassword.Location = new System.Drawing.Point(216, 363);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.Size = new System.Drawing.Size(224, 27);
-            txtConfirmPassword.TabIndex = 35;
+            txtConfirmPassword.TabIndex = 6;
             txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // panel2
@@ -191,7 +191,7 @@
             panel2.Location = new System.Drawing.Point(216, 230);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(224, 35);
-            panel2.TabIndex = 36;
+            panel2.TabIndex = 3;
             // 
             // rdFemale
             // 
@@ -226,7 +226,7 @@
             btnChange.Location = new System.Drawing.Point(330, 407);
             btnChange.Name = "btnChange";
             btnChange.Size = new System.Drawing.Size(110, 33);
-            btnChange.TabIndex = 38;
+            btnChange.TabIndex = 7;
             btnChange.Text = "Register";
             btnChange.UseVisualStyleBackColor = false;
             btnChange.Click += btnChange_Click;
@@ -236,7 +236,7 @@
             txtPhoneNumber.Location = new System.Drawing.Point(216, 186);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.Size = new System.Drawing.Size(224, 27);
-            txtPhoneNumber.TabIndex = 39;
+            txtPhoneNumber.TabIndex = 2;
             // 
             // frmRegister
             // 

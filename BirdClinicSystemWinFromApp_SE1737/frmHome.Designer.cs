@@ -66,7 +66,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.user;
-            pictureBox1.Location = new System.Drawing.Point(12, 161);
+            pictureBox1.Location = new System.Drawing.Point(-2, 158);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new System.Drawing.Size(142, 135);
             pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,11 +87,11 @@
             btnViewService.BackColor = System.Drawing.SystemColors.ActiveCaption;
             btnViewService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnViewService.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            btnViewService.Location = new System.Drawing.Point(99, 340);
+            btnViewService.Location = new System.Drawing.Point(79, 340);
             btnViewService.Name = "btnViewService";
             btnViewService.Size = new System.Drawing.Size(127, 48);
             btnViewService.TabIndex = 4;
-            btnViewService.Text = "View Service";
+            btnViewService.Text = "Service";
             btnViewService.UseVisualStyleBackColor = false;
             btnViewService.Click += button1_Click;
             // 
@@ -99,11 +99,11 @@
             // 
             btnViewMedicalRecord.BackColor = System.Drawing.SystemColors.ActiveCaption;
             btnViewMedicalRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnViewMedicalRecord.Location = new System.Drawing.Point(232, 340);
+            btnViewMedicalRecord.Location = new System.Drawing.Point(212, 340);
             btnViewMedicalRecord.Name = "btnViewMedicalRecord";
             btnViewMedicalRecord.Size = new System.Drawing.Size(165, 48);
             btnViewMedicalRecord.TabIndex = 5;
-            btnViewMedicalRecord.Text = "View Medical Record";
+            btnViewMedicalRecord.Text = "Medical Record";
             btnViewMedicalRecord.UseVisualStyleBackColor = false;
             btnViewMedicalRecord.Click += button2_Click;
             // 
@@ -111,11 +111,11 @@
             // 
             button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Location = new System.Drawing.Point(403, 340);
+            button1.Location = new System.Drawing.Point(383, 340);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(163, 48);
             button1.TabIndex = 6;
-            button1.Text = "View Appointment";
+            button1.Text = "Appointment";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
@@ -264,7 +264,7 @@
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label7.ForeColor = System.Drawing.Color.Transparent;
-            label7.Location = new System.Drawing.Point(241, 36);
+            label7.Location = new System.Drawing.Point(266, 36);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(302, 29);
             label7.TabIndex = 7;
@@ -284,11 +284,11 @@
             // 
             btnBlog.BackColor = System.Drawing.SystemColors.ActiveCaption;
             btnBlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnBlog.Location = new System.Drawing.Point(571, 340);
+            btnBlog.Location = new System.Drawing.Point(552, 340);
             btnBlog.Name = "btnBlog";
             btnBlog.Size = new System.Drawing.Size(118, 48);
             btnBlog.TabIndex = 25;
-            btnBlog.Text = "View Blog";
+            btnBlog.Text = "Blog";
             btnBlog.UseVisualStyleBackColor = false;
             btnBlog.Click += btnBlog_Click;
             // 
@@ -296,7 +296,7 @@
             // 
             btnBird.BackColor = System.Drawing.SystemColors.ActiveCaption;
             btnBird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnBird.Location = new System.Drawing.Point(695, 340);
+            btnBird.Location = new System.Drawing.Point(676, 340);
             btnBird.Name = "btnBird";
             btnBird.Size = new System.Drawing.Size(118, 48);
             btnBird.TabIndex = 26;

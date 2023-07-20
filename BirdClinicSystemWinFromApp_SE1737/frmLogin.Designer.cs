@@ -212,7 +212,7 @@
             btnClose.Location = new System.Drawing.Point(870, 0);
             btnClose.Name = "btnClose";
             btnClose.Size = new System.Drawing.Size(40, 40);
-            btnClose.TabIndex = 11;
+            btnClose.TabIndex = 6;
             btnClose.Text = "X";
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
@@ -225,7 +225,7 @@
             panel2.Location = new System.Drawing.Point(371, 203);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(524, 50);
-            panel2.TabIndex = 12;
+            panel2.TabIndex = 1;
             // 
             // txtEmail
             // 
@@ -235,7 +235,7 @@
             txtEmail.Location = new System.Drawing.Point(62, 11);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new System.Drawing.Size(443, 29);
-            txtEmail.TabIndex = 15;
+            txtEmail.TabIndex = 0;
             // 
             // pictureBox4
             // 
@@ -255,7 +255,7 @@
             panel3.Location = new System.Drawing.Point(371, 259);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(524, 50);
-            panel3.TabIndex = 13;
+            panel3.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -265,7 +265,7 @@
             txtPassword.Location = new System.Drawing.Point(62, 10);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new System.Drawing.Size(443, 29);
-            txtPassword.TabIndex = 16;
+            txtPassword.TabIndex = 0;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // pictureBox5
@@ -289,7 +289,7 @@
             btnLogin.Location = new System.Drawing.Point(702, 324);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new System.Drawing.Size(193, 42);
-            btnLogin.TabIndex = 14;
+            btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
@@ -342,7 +342,7 @@
             linkLabel2.Location = new System.Drawing.Point(614, 338);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new System.Drawing.Size(82, 28);
-            linkLabel2.TabIndex = 19;
+            linkLabel2.TabIndex = 3;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Register";
             linkLabel2.LinkClicked += linkLabel2_LinkClicked;
@@ -352,10 +352,10 @@
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label11.ForeColor = System.Drawing.Color.FromArgb(41, 128, 185);
-            label11.Location = new System.Drawing.Point(494, 390);
+            label11.Location = new System.Drawing.Point(678, 390);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(217, 34);
-            label11.TabIndex = 20;
+            label11.TabIndex = 0;
             label11.Text = "View our blogs";
             // 
             // btnBlog
@@ -366,10 +366,10 @@
             btnBlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnBlog.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnBlog.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            btnBlog.Location = new System.Drawing.Point(503, 453);
+            btnBlog.Location = new System.Drawing.Point(702, 453);
             btnBlog.Name = "btnBlog";
             btnBlog.Size = new System.Drawing.Size(193, 42);
-            btnBlog.TabIndex = 21;
+            btnBlog.TabIndex = 5;
             btnBlog.Text = "Blog";
             btnBlog.UseVisualStyleBackColor = false;
             btnBlog.Click += btnBlog_Click;

@@ -93,8 +93,15 @@ namespace BirdClinicSystemWinFromApp_SE1737
                 $"{cbbBridID.SelectedItem.ToString()} ?", "Notification", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                birdRepository.DeleteBird(Int32.Parse(cbbBridID.SelectedItem.ToString()));
-                MessageBox.Show("Delete completed", "Notificaiton");
+                if (birdRepository.DeleteBird(Int32.Parse(cbbBridID.SelectedItem.ToString())))
+                {
+                    MessageBox.Show("Delete completed", "Notificaiton");
+                }
+                else
+                {
+                    MessageBox.Show("Delete failed because your bird maybe still in a incompleted appointment.", "Notificaiton");
+                }
+                
             }
             cbbBridID.Items.Clear();
             AddIdToCBB();

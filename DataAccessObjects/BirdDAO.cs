@@ -72,19 +72,50 @@ namespace DataAccessObjects
             }catch (Exception ex) { }
         }
 
-        public void DeleteBird(int id)
+        public bool DeleteBird(int id)
         {
             try
             {
                 using (var context = new BirdClinicDBContext())
                 {
-                    var bird = new TblBird();
-                    bird=context.TblBirds.Where(s=>s.BirdId==id).FirstOrDefault();
-                    context.TblBirds.Remove(bird);
-                    context.SaveChanges();
+                    using (var dbContextTransaction = context.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Check if there are any appointments with BirdID=id and Status!=3
+                            if (context.TblAppointments.Any(a => a.BirdId == id && a.Status != 3))
+                            {
+                                throw new Exception("There are appointments for this bird which are not completed. Cannot delete.");
+                            }
+                            else
+                            {
+                                // Update the UserID of tblBird to NULL where BirdID=id
+                                var bird = context.TblBirds.SingleOrDefault(b => b.BirdId == id);
+                                if (bird != null)
+                                {
+                                    bird.UserId = null;
+                                    context.SaveChanges();
+                                }
+
+                                // Commit the transaction
+                                dbContextTransaction.Commit();
+                                return true;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            // Rollback the transaction if there is any exception
+                            dbContextTransaction.Rollback();
+                            throw ex;
+                        }
+                    }
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                // Handle exception here
+                return false;
+            }
         }
 
         public void UpdateBird(TblBird bird)

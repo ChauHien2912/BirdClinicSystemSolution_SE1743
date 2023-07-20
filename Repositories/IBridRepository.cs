@@ -14,7 +14,7 @@ namespace Repositories
         List<TblBird> GetBirdInfor(int ID);
 
         public void AddBird(TblBird bird);
-        public void DeleteBird(int id);
+        public bool DeleteBird(int id);
         public void UpdateBird(TblBird bird);
     }
 }

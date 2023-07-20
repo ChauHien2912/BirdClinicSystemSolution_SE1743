@@ -15,9 +15,9 @@ namespace Repositories
             BirdDAO.Instance.AddBird(bird);
         }
 
-        public void DeleteBird(int id)
+        public bool DeleteBird(int id)
         {
-            BirdDAO.Instance.DeleteBird(id);
+            return BirdDAO.Instance.DeleteBird(id);
         }
 
         public List<int> GetBirdID(int ID)
